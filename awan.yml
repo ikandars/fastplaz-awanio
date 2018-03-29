@@ -2,3 +2,4 @@ version: '1.0'
 web:
   type: docker
   doc_root: ./public
+  git_branch: dev
