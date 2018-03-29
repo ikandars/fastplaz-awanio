@@ -22,10 +22,11 @@ ENV NAME FastPlaz
 
 
 # Install any needed packages specified
+RUN yum -y update
 RUN yum install -y httpd
 #RUN yum install -y git 
 #RUN yum install nano vim
-
+RUN yum install -y curl
 # Apache setup
 ADD config/apache/fastplaz.conf /etc/httpd/conf.d/
 RUN ln -s /projects/echo/public_html /var/www/html/echo
